@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawKeep - Track. Care. Love.</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #333;
+            background: #fafafa;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(135deg, #D4803A, #E8A855);
+            color: white;
+        }
+        .hero img {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .hero .tagline {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        .hero .subtitle {
+            font-size: 16px;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+        .app-store-badge {
+            display: inline-block;
+            height: 54px;
+        }
+        .features {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: #222;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .feature-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #222;
+            color: #999;
+            font-size: 14px;
+        }
+        footer a {
+            color: #D4803A;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        footer a:hover { text-decoration: underline; }
+        .footer-links {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="icon.png" alt="PawKeep App Icon">
+        <h1>PawKeep</h1>
+        <p class="tagline">Track. Care. Love.</p>
+        <p class="subtitle">The all-in-one pet health companion. Track medications, vaccinations, vet visits, expenses, walks, and more — with Apple Watch support and professional PDF exports.</p>
+        <!-- Uncomment when app is live on App Store -->
+        <!-- <a href="https://apps.apple.com/app/pawkeep/id_YOUR_APP_ID"><img class="app-store-badge" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store"></a> -->
+    </div>
+
+    <div class="features">
+        <h2>Everything Your Pet Needs</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">💊</div>
+                <h3>Health Tracking</h3>
+                <p>Log medications, vaccinations, vet visits, and weight. Get smart wellness scoring with personalized action items.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🚶</div>
+                <h3>Walk Tracking</h3>
+                <p>GPS routes, distance, duration, and drop pins. Weekly insights with goal tracking and streak counter.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💰</div>
+                <h3>Expense Management</h3>
+                <p>Track spending by category. Monthly trends, insurance claims, recurring expenses, and CSV/PDF export.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📸</div>
+                <h3>Photo Albums</h3>
+                <p>Organize pet photos with smart albums. Show Mode slideshow for sharing with friends.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📍</div>
+                <h3>Places</h3>
+                <p>Discover nearby dog parks, vets, and pet-friendly spots. Emergency vet finder with one-tap calling.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⌚</div>
+                <h3>Apple Watch</h3>
+                <p>Log meals, track medications, start walks, and find emergency vets — all from your wrist.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy">Privacy Policy</a>
+            <a href="terms">Terms of Use</a>
+            <a href="support">Support</a>
+        </div>
+        <p>&copy; 2026 PawKeep. All rights reserved.</p>
+    </footer>
+</body>
+</html>
