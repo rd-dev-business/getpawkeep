@@ -8,61 +8,97 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; }
         h1 { color: #D4803A; }
         h2 { color: #555; margin-top: 30px; }
+        h3 { color: #666; margin-top: 20px; }
         .date { color: #888; font-size: 14px; }
+        ul { margin-left: 0; padding-left: 20px; }
     </style>
 </head>
 <body>
-    <div style="text-align:center;padding:24px 20px 0"><a href="/"><img src="/logo.jpg" alt="PawKeep" style="height:80px"></a></div>
     <h1>PawKeep Privacy Policy</h1>
-    <p class="date">Last updated: April 8, 2026</p>
+    <p class="date">Last updated: May 15, 2026</p>
 
     <h2>Overview</h2>
-    <p>PawKeep ("we", "our", "the app") is a pet health tracking application. We are committed to protecting your privacy. This policy explains what data PawKeep collects, how it's used, and your rights.</p>
+    <p>PawKeep ("we", "our", "the app") is a pet health tracking application. We are committed to protecting your privacy. This policy explains what data PawKeep collects, how it is used, and your rights.</p>
+    <p><strong>PawKeep is local-first.</strong> All of your data is stored on your device. We do not operate servers, we do not maintain databases of your personal information, and we do not share your data with any third party.</p>
 
-    <h2>Data We Collect</h2>
-    <p>PawKeep stores all data <strong>locally on your device</strong>. We do not operate servers or databases that store your personal information. The data you enter includes:</p>
+    <h2>Data You Enter Into PawKeep</h2>
+    <p>The following data is stored locally on your device when you choose to enter it into the app:</p>
     <ul>
-        <li>Pet information (name, breed, date of birth, weight, photos)</li>
-        <li>Health records (medications, vaccinations, vet visits, symptoms)</li>
-        <li>Expense records (amounts, categories, receipts)</li>
-        <li>Favorite places and locations</li>
-        <li>Documents and uploaded images</li>
+        <li>Pet information (name, species, breed, date of birth, weight, sex, photos, microchip number, license number)</li>
+        <li>Health records (medications, dosages, reminders, vaccinations, vet visits, symptoms, lab results, allergies, weight history)</li>
+        <li>Walk records (route, distance, duration, step count, photos, pins)</li>
+        <li>Feeding records (meals, schedules, food brands, portions)</li>
+        <li>Expense records (amounts, categories, receipts, recurring subscriptions, insurance claims)</li>
+        <li>Favorite places (vet clinics, dog parks, groomers, with optional ratings and notes)</li>
+        <li>Documents (lab reports, DNA tests, X-rays, prescriptions, insurance documents)</li>
+        <li>Vet visit audio recordings and on-device transcriptions (Premium feature, optional)</li>
     </ul>
 
-    <h2>Location Data</h2>
-    <p>PawKeep requests location access <strong>only</strong> for walk tracking and nearby place discovery. Location data is stored locally on your device as part of walk routes. We do not transmit location data to any server.</p>
+    <h2>System Permissions and How They Are Used</h2>
 
-    <h2>Camera & Photos</h2>
-    <p>PawKeep requests camera and photo library access to allow you to add pet photos, scan documents, and attach receipt images. Photos are stored locally on your device. Photos taken within the app are saved to your Camera Roll.</p>
+    <h3>Location</h3>
+    <p>PawKeep requests location access for two purposes:</p>
+    <ul>
+        <li><strong>Walk tracking</strong> — your route is recorded locally as a sequence of coordinates so you can review your walks later.</li>
+        <li><strong>Nearby place discovery</strong> — dog parks, vet clinics, groomers and other pet-friendly locations near you, retrieved via Apple's MapKit. PawKeep sends your coordinates to Apple as part of standard MapKit search; it does not send them to PawKeep servers.</li>
+    </ul>
+    <p>Location data is never transmitted to any PawKeep-operated server. You can revoke this permission at any time in iOS Settings &rarr; Privacy &amp; Security &rarr; Location Services &rarr; PawKeep.</p>
 
-    <h2>HealthKit</h2>
-    <p>PawKeep can record dog walks as workouts in Apple Health and read step count and distance data. This data stays within Apple's HealthKit framework and is not transmitted to any server.</p>
+    <h3>HealthKit (Apple Health)</h3>
+    <p>If you grant permission, PawKeep integrates with Apple Health to:</p>
+    <ul>
+        <li><strong>Write</strong> dog walks as workouts in the Health app, including duration, distance, active energy burned, and walking route. These workouts contribute to your Activity rings.</li>
+        <li><strong>Read</strong> step count, walking distance, active energy, heart rate, and flights climbed during a walk in progress, so the app can show accurate metrics in real time.</li>
+    </ul>
+    <p>Health data stays inside Apple's HealthKit framework and on your device. It is never transmitted to any PawKeep server and is never shared with third parties. You can revoke this permission at any time in iOS Settings &rarr; Health &rarr; Data Access &amp; Devices &rarr; PawKeep, or in iOS Settings &rarr; Privacy &amp; Security &rarr; Health &rarr; PawKeep.</p>
 
-    <h2>iCloud</h2>
-    <p>PawKeep may use iCloud Drive to store backup copies of your data for recovery purposes. This data is protected by your Apple ID and iCloud security. We do not have access to your iCloud data.</p>
+    <h3>Motion and Fitness</h3>
+    <p>PawKeep uses the Motion &amp; Fitness sensor (CoreMotion / pedometer) to count steps during a walk when HealthKit access has not been granted. Motion data is processed on-device and stored as part of your walk record. You can revoke this in iOS Settings &rarr; Privacy &amp; Security &rarr; Motion &amp; Fitness &rarr; PawKeep.</p>
+
+    <h3>Camera and Photos</h3>
+    <p>PawKeep accesses your camera and photo library only when you choose to add a pet photo, attach a receipt, scan a document, or upload a lab report. Photos you select are stored inside the app and, optionally, in your Camera Roll if you save them. PawKeep uses Apple's out-of-process photo picker by default, so PawKeep can only see the photos you explicitly choose &mdash; not your entire library.</p>
+
+    <h3>Microphone</h3>
+    <p>The microphone is used only when you start a vet visit recording (a Premium feature). Audio is recorded and stored locally on your device. A visible "Recording" indicator with a red dot is shown the entire time the microphone is active. Recordings are not transmitted off the device unless you explicitly export them.</p>
+
+    <h3>Speech Recognition</h3>
+    <p>If you transcribe a vet visit recording, transcription is performed by Apple's on-device Speech Recognition. Audio is not sent to any server, including Apple's. You can revoke this in iOS Settings &rarr; Privacy &amp; Security &rarr; Speech Recognition &rarr; PawKeep.</p>
+
+    <h3>Notifications</h3>
+    <p>If you grant permission, PawKeep sends local notifications for medication reminders, walk completion, feeding schedules, and similar events. Notifications are generated on-device. PawKeep does not use push notifications from a remote server in this version.</p>
+
+    <h2>iCloud, CloudKit, and Sharing</h2>
+    <p>PawKeep is configured with the iCloud and CloudKit entitlement so that you can share an individual pet's profile with another user (for example, a family member or pet sitter) via the standard Apple sharing flow. Shared pet data syncs through your private iCloud database under your Apple ID, encrypted with Apple's standard iCloud encryption.</p>
+    <p>In the current version of PawKeep, automatic CloudKit sync of all data is disabled. iCloud is used only when you explicitly use the share-a-pet feature.</p>
+    <p>PawKeep does not have access to your iCloud data; only Apple does, governed by your Apple ID and Apple's iCloud terms.</p>
+
+    <h2>In-App Purchases and Subscriptions</h2>
+    <p>PawKeep Premium is offered via Apple's standard in-app purchase system using StoreKit 2. PawKeep does not collect or store your payment information. Transactions are handled entirely by Apple. The app reads your current subscription entitlement from Apple's StoreKit framework to determine whether to unlock Premium features. PawKeep does not use any third-party payment processor or subscription management SDK.</p>
 
     <h2>Third-Party Services</h2>
-    <p>PawKeep may use the following third-party services:</p>
-    <ul>
-        <li><strong>RevenueCat</strong> — for managing in-app subscriptions. RevenueCat processes purchase transactions through Apple. See <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a>.</li>
-        <li><strong>Sentry</strong> — for crash reporting (anonymous crash data only, no personal information). See <a href="https://sentry.io/privacy/">Sentry's Privacy Policy</a>.</li>
-        <li><strong>PostHog</strong> — for anonymous usage analytics (no personal data collected). See <a href="https://posthog.com/privacy">PostHog's Privacy Policy</a>.</li>
-    </ul>
+    <p>This version of PawKeep does <strong>not</strong> include any third-party analytics, crash reporting, advertising, tracking, or social-media SDKs. No third party receives any data from PawKeep.</p>
 
     <h2>Data Sharing</h2>
-    <p>We do <strong>not</strong> sell, share, or transmit your personal data to any third party. Your pet's health information stays on your device.</p>
+    <p>We do <strong>not</strong> sell your data. We do <strong>not</strong> share your data with advertisers, data brokers, or any other third party. Your pet's information stays on your device.</p>
+    <p>Health and fitness data collected through HealthKit is never used for advertising, marketing, or any data-mining purpose.</p>
 
-    <h2>Data Retention</h2>
-    <p>Your data is stored on your device for as long as you use the app. Deleting the app removes all local data. iCloud backups persist until you delete them from iCloud.</p>
+    <h2>Data Retention and Deletion</h2>
+    <p>Your data is stored on your device for as long as you use the app. You can delete individual records at any time inside the app. Uninstalling PawKeep removes all locally-stored data, including walk routes, photos, documents, and audio recordings. If you have shared a pet via the iCloud share feature, the shared CloudKit record may persist in iCloud until you revoke the share; you can manage that in the app under Pet &rarr; Share &amp; Sync.</p>
 
     <h2>Children's Privacy</h2>
     <p>PawKeep does not knowingly collect information from children under 13. The app is rated 4+ and does not contain age-restricted content.</p>
 
     <h2>Your Rights</h2>
-    <p>Since all data is stored locally on your device, you have full control over it. You can delete any data within the app, or delete the app entirely to remove all data.</p>
+    <p>Because all data is stored locally on your device, you have full control over it. You may:</p>
+    <ul>
+        <li>View, edit, or delete any individual record inside the app.</li>
+        <li>Export your data via the Export feature (Premium).</li>
+        <li>Revoke any iOS permission (Location, Health, Camera, Photos, Microphone, Speech, Motion, Notifications) at any time in iOS Settings.</li>
+        <li>Delete all data instantly by deleting the app.</li>
+    </ul>
 
     <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date.</p>
+    <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date. Material changes will also be communicated within the app on first launch after the update.</p>
 
     <h2>Contact Us</h2>
     <p>If you have questions about this privacy policy, contact us at:</p>
